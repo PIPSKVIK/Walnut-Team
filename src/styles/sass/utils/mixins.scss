@@ -1,0 +1,35 @@
+@mixin header-wrap {
+  max-width: 1278px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+@mixin bg-setting {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+@mixin list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin text {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin text-link {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #5a5a5a
+}
+
+@mixin refresh-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

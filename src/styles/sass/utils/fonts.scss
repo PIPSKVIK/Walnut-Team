@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "CenturyGothic";
+  src: url(@/assets/fonts/CenturyGothic.woff) format("woff");
+}
+
+@font-face {
+  font-family: "CenturyGothic Italic";
+  font-style: italic;
+  src: url(@/assets/fonts/CenturyGothic-Italic.woff) format("woff")
+}
+
+@font-face {
+  font-family: "CenturyGothic BoldItalic";
+  font-size: 700;
+  font-style: italic;
+  src: url(@/assets/fonts/CenturyGothic-BoldItalic.woff) format("woff")
+}
+
+@font-face {
+  font-family: "CenturyGothic Bold";
+  font-size: 700;
+  src: url(@/assets/fonts/CenturyGothic-Bold.woff) format("woff")
+}

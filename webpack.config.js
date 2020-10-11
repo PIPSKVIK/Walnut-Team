@@ -10,9 +10,9 @@ const isProd = !isDev
 
 const optimization = () => {
   const config = {
-    port: 8080,
     overlay: true,
-    hot: isDev
+    // hot: isDev,
+    inline: true
   }
 
   if (isProd) {
@@ -86,12 +86,24 @@ module.exports = {
         use: cssLoaders('sass-loader')
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ['file-loader']
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outoutPayh: 'img/'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|ttf|eot)$/,
         use: ['file-loader']
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       },
       {
         test: /\.js$/,
