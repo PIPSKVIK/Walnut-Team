@@ -232,6 +232,17 @@
   .header__wrapper {
     width: 1000px;
   }
+
+  .header__info {
+    align-items: center;
+    padding-top: 10px;
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-mail {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 @media (max-width: 1130px) {
@@ -245,6 +256,22 @@
 
   .header__wrapper {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 945px) {
+  .header__location {
+    display: none;
+  }
+
+  .header__wrapper {
+    justify-content: center;
+  }
+
+  .header__title {
+    &::before {
+      top: -22px;
+    }
   }
 }
 
@@ -308,6 +335,97 @@
     &::after {
       height: 100px;
       right: -110px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .header__wrapper {
+    justify-content: flex-end;
+    width: 350px;
+    margin: 0 auto;
+    padding: 5px 0;
+  }
+
+  .header__personal {
+    width: 200px;
+    flex-wrap: wrap;
+      &-wrapper {
+        justify-content: space-between;
+        width: 100%;
+      }
+  }
+
+  .header__title {
+    margin-left: 0;
+    width: 120px;
+      &::before {
+        left: -55px;
+        top: 10px;
+      }
+  }
+
+  .header__main {
+    &::before {
+      left: 0;
+      height: 112px;
+    }
+    &::after {
+      right: -40px;
+      height: 112px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .header__wrapper {
+    width: 290px;
+    align-items: center;
+      &::before {
+        display: none;
+      }
+  }
+
+  .header__title {
+    font-size: 12px;
+    line-height: 18px;
+      &::before {
+        height: 108px;
+        width: 35px;
+        top: -4px;
+      }
+  }
+
+  .header__personal {
+    width: 76px;
+    &-call {
+      display: none;
+    }
+    &-wrapper {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &-text {
+      display: inline-block;
+      font-size: 10px;
+    }
+    &-enter {
+      width: 77px;
+      margin-right: 0;
+      padding: 7px 0;
+    }
+    &-basket {
+      width: 77px;
+      margin-right: 0;
+    }
+  }
+
+  .header__main {
+    &::before {
+      height: 70px;
+    }
+    &::after {
+      display: none;
     }
   }
 }

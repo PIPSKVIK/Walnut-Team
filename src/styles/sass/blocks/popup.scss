@@ -1,6 +1,6 @@
-// .popup-fade {
-// 	display: none;
-// }
+.popup-fade {
+	display: none;
+}
 
 .popup {
 	position: fixed;
@@ -8,7 +8,7 @@
 	left: 50%;
 	padding: 20px;
 	width: 305px;
-	margin-left: -200px;	
+	margin-left: -200px;
 	background: #fff;
 	z-index: 99999;
 	opacity: 1;
@@ -44,6 +44,10 @@
   text-transform: uppercase;
     & a {
       color: #000;
+      text-decoration: none;
+        &:hover {
+          color: #019ec4;
+        }
     }
 }
 
@@ -72,6 +76,9 @@
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 10px;
+    &:hover {
+      color: #019ec4;
+    }
 }
 
 .popup__social {
@@ -100,4 +107,32 @@
           color: #019ec4;
         }
     }
+}
+
+.popup__callback {
+  background: #019ec4;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 7px;
+  padding: 3px 8px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  .popup {
+    width: 200px;
+    margin-left: -100px;
+      &__callback {
+        display: block;
+      }
+  }
+
+  .popup__nav-item {
+    font-size: 11px;
+    line-height: 36px;
+  }
 }

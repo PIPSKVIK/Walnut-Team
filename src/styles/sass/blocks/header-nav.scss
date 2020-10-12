@@ -9,17 +9,24 @@
       padding-bottom: 19.5px;
     }
     &-item {
-      line-height: 1.2;
-      color: #5a5a5a;
-      text-transform: uppercase;
       cursor: pointer;
-        &:hover {
-          color: #019ec4;
+        & a {
+          text-decoration: none;
+          color: #5a5a5a;
+          line-height: 1.2;
+          text-transform: uppercase;
+            &:hover {
+              color: #019ec4;
+            }
         }
     }
 }
 
 .menu-button {
+  display: none;
+}
+
+.popup-open {
   display: none;
 }
 
@@ -44,8 +51,7 @@
 
 @media (max-width: $tablet) {
   .header__nav {
-    margin: 0 auto;
-    width: 635px;
+    padding: 0 40px;
     display: flex;
     justify-content: flex-end;
     &-list {
