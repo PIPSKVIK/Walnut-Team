@@ -10,14 +10,16 @@
   background-position: center;
   position: relative;
     &--first {
-      background-color: red;
+      background-color: #ebf0f4;
       background-image: url("@/assets/slider/slider-bg-1920.png");
     }
     &--second {
-      background-color: blue;
+      background-color: #ebf0f4;
+      background-image: url("@/assets/slider/slider-bg-1920.png");
     }
     &--third {
-      background-color: blueviolet;
+      background-color: #ebf0f4;
+      background-image: url("@/assets/slider/slider-bg-1920.png");
     }
 }
 
@@ -71,18 +73,85 @@
   font-size: 0;
   line-height: 0;
   display: block;
-  width: 20px;
-  height: 25px;
   padding: 0;
-  background-color: #000000;
   border: none;
   margin: 0 5px;
   outline: none;
+  width: 12px;
+  height: 23px;
+  background-image: url("@/assets/slider/slider-button.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .promo-slider__dots li.slick-active button {
-  height: 40px;
-  width: 20px;
   margin: 0 5px;
-  background-color: #019ec4;
+  width: 12px;
+  height: 37px;
+  background-image: url("@/assets/slider/slider-button-active.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media (max-width: $tablet) {
+  .slider__content {
+    padding: 0 5%;
+    &-title {
+      font-size: 48px;
+    }
+    &-text {
+      font-size: 16px;
+    }
+  }
+
+  .slider__background  {
+    height: 465px;
+      &--first {
+        background-image: url("@/assets/slider/slider-bg-768.png");
+      }
+      &--second {
+        background-image: url("@/assets/slider/slider-bg-768.png");
+      }
+      &--third {
+        background-image: url("@/assets/slider/slider-bg-768.png");
+      }
+  }
+
+  .promo-slider__dots {
+    bottom: 70px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .slider__content {
+    padding: 0 5%;
+      &-title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 21px;
+      }
+  }
+
+  .slider__background {
+    height: 534px;
+  }
+
+  .promo-slider__dots {
+    bottom: 10px;
+      &--first {
+        background-image: url("@/assets/slider/slider-bg-320.png");
+      }
+      &--second {
+        background-image: url("@/assets/slider/slider-bg-320.png");
+      }
+      &--third {
+        background-image: url("@/assets/slider/slider-bg-320.png");
+      }
+  }
 }
