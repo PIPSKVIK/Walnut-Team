@@ -3,6 +3,10 @@ require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
 const $ = require('jquery');
 
+window.jQuery = $;
+window.fancybox = $.fancybox;
+require("@fancyapps/fancybox");
+
 $(document).ready(function(){
   $('.slider').slick({
     infinite: true,

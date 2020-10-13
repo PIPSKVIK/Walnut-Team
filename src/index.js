@@ -1,5 +1,6 @@
-import '@/js/main.js'
-import '@/styles/css/style.css'
 import '@/js/jquery.js'
+import '@/styles/css/style.css'
 import '@/styles/sass/main.scss'
 import '@/js/slider.js'
+import '@/js/main.js'
+import './js/funcybox.js'
