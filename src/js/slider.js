@@ -1,7 +1,8 @@
+const $ = require('jquery');
+
 require('slick-carousel');
 require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
-const $ = require('jquery');
 
 window.jQuery = $;
 window.fancybox = $.fancybox;

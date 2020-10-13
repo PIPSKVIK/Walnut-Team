@@ -1,0 +1,42 @@
+.request {
+  &__wrapper {
+    padding: 45px 45px 0 45px;
+    position: absolute;
+    background-color: #e0e0e0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 600px;
+    margin: 0 auto;
+    display: none;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-title {
+      margin: 0;
+      font-size: 30px;
+      line-height: 28px;
+      font-family: "CenturyGothic Bold";
+      text-transform: uppercase;
+    }
+    &-close {
+      text-decoration: none;
+      color: #bebebe;
+    }
+  }
+
+  &__main {
+    background-image: url("@/assets/img/background/background-request.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 300px;
+    &-text {
+      line-height: 30px;
+    }
+  }
+}
