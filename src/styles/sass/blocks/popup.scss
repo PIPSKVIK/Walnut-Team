@@ -94,3 +94,9 @@
   cursor: pointer;
   display: none;
 }
+
+@media (max-width: $mobile) {
+  .popup__callback {
+    display: block;
+  }
+}

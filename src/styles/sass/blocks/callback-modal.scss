@@ -105,3 +105,22 @@ input[type="checkbox"]:checked + label:before {
   color: #ffffff;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .callback {
+    &__wrapper {
+      width: 400px;
+    }
+  }
+
+  .main-data {
+    &--input {
+      padding: 10px 0;
+    }
+  }
+
+  .callback__main-button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
