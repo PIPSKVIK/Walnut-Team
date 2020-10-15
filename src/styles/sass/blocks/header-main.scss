@@ -101,33 +101,21 @@
     &:active::after {
       border-color: #000000;
     }
+    &--icon {
+      color: #019ec4;
+      width: 16px;
+      height: 16px;
+    }
+    &:hover {
+      color: #019ec4;
+    }
   }
-  &-link:hover {
-    color: #019ec4;
-  }
-  &-link:active {
-    fill: #000000;
-  }
+
   &-slogan {
     font-size: 13px;
     line-height: 1.2;
     text-transform: uppercase;
     margin: 16px 0 0 0;
-  }
-}
-
-.header__social {
-  &-title {
-    margin: 0 13px 0 0;
-  }
-  &-vk {
-    margin-right: 13px;
-    &--icon:hover {
-      fill: #019ec4;
-    }
-  }
-  &-fb--icon:hover {
-    fill: #019ec4;
   }
 }
 
@@ -138,28 +126,62 @@
   width: 360px;
   margin-right: 40px;
   z-index: 103;
-  &-mail {
-    @include text-link;
-  }
-  &-mail:hover {
-    color: #019ec4;
-  }
-  &-phone {
-    @include text-link;
-  }
-  &-phone:hover {
-    color: #019ec4;
-  }
-  &-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
+    &-mail {
+      @include text-link;
+        &--icon {
+          width: 16px;
+          height: 11px;
+          color: #019ec4;
+        }
+    }
+    &-mail:hover {
+      color: #019ec4;
+    }
+    &-phone {
+      @include text-link;
+        &--icon {
+          width: 16px;
+          height: 16px;
+          color: #019ec4;
+        }
+    }
+    &-phone:hover {
+      color: #019ec4;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
 }
 
 .header__social {
   display: flex;
   justify-content: flex-end;
+    &-title {
+      margin: 0 13px 0 0;
+    }
+    &-vk {
+      &--icon {
+        width: 17px;
+        height: 10px;
+        color: #c2c2c2;
+        margin-right: 12px;
+          &:hover {
+            color: #019ec4;
+          }
+      }
+    }
+    &-fb {
+      &--icon {
+        width: 9px;
+        height: 18px;
+        color: #c2c2c2;
+          &:hover {
+            color: #019ec4;
+          }
+      }
+    }
 }
 
 .header__personal {
@@ -199,11 +221,19 @@
     display: flex;
     justify-content: space-between;
   }
-  &-basket--icon {
-    margin-right: 10px;
+  &-basket {
+    &--icon {
+      margin-right: 10px;
+      width: 18px;
+      height: 16px;
+    }
   }
-  &-enter--icon {
-    margin-right: 10px;
+  &-enter {
+    &--icon {
+      margin-right: 10px;
+      width: 14px;
+      height: 16px;
+    }
   }
 }
 

@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -63,6 +64,7 @@ module.exports = {
     }
   },
   plugins: [
+    new SpriteLoaderPlugin(),
     new HTMLWebpackPlugin({
       template: './index.html',
       minify: {
@@ -77,6 +79,18 @@ module.exports = {
   devtool: isDev ? 'source-map' : '',
   module: {
     rules: [
+      {
+        test: /\.svg$/i,
+        include: /.*_sprite\.svg/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              publicPath: ''
+            }
+          }
+        ]
+      },
       {
         test: /\.css$/,
         use: cssLoaders()
