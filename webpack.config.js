@@ -50,7 +50,8 @@ module.exports = {
   entry : ['@babel/polyfill' ,'./index.js'],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: "/webpack-demo/"
   },
   devServer: optimization(),
   resolve: {
