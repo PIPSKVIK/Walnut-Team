@@ -173,6 +173,9 @@
     border-radius: 8px;
     padding: 9px 0;
     margin-bottom: 16px;
+      &:hover {
+        background-color: #0090b3;
+      }
   }
   &-enter,
   &-basket {
@@ -220,8 +223,8 @@
 .basket-counter {
   width: 20px;
   height: 20px;
-  background-color: currentColor;
-  color: currentColor;
+  background-color: #eeeeee;
+  // color: currentColor;
   border-radius: 50%;
   font-family: "CenturyGothic Bold";
   font-size: 10px;
@@ -230,6 +233,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+    &__item {
+      color: #000000;
+      &:hover {
+        color: #019ec4;
+      }
+    }
 }
 
 // ===================================================
@@ -387,7 +396,6 @@
       height: 112px;
     }
     &::after {
-      right: -40px;
       height: 112px;
     }
   }
